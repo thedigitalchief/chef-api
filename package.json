@@ -1,0 +1,41 @@
+{
+  "name": "chefjoyv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon server.js \"test\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "chef_joy_common": "file:../chef_joy_common",
+  "dependencies": {
+    "@babel/preset-env": "^7.14.0",
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validation": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.7",
+    "mongoose-datatable": "^3.1.0",
+    "mongoose-long": "^0.4.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.1",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/register": "^7.13.16",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
+  }
+}
