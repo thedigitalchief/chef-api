@@ -16,7 +16,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.connect( MONGODB_LOCAL, { useUnifiedTopology: true  });
 mongoose.connection.once('open',function() {
-   console.log('connection has been made');
+   console.log('Successful onnection has been made!');
 }).on('error',function(error){
    console.log('error is :', error);
 });

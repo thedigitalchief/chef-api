@@ -24,16 +24,15 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use("/pub", pubRoutes);
 app.use("/api", apiAuth, apiRoutes);
-app.use(function (err, req, res, next) {
-  // specific for validation errors
-  if (err instanceof Validate.ValidationError)
-    return res.status(err.status).json(err);
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to ChefJoy API." });
+});
 
-  // other type of errors, it *might* also be a Runtime Error
-  return res.status(500).send(err.stack);
-});
-app.listen(PORT, function () {
-  console.log(`App is Listening at ${chalk.green(PORT)}`);
-});
+const port = process.env.PORT || 3500
+app.listen(port, function() {
+    console.log('Successfully started server on http://localhost:' + port + ' !');
+})
+
+
 
 module.exports = app;
